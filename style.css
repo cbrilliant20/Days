@@ -70,12 +70,14 @@ body {
   object-fit: cover;
 }
 
-.fashion-span {
-  color: rgb(255, 139, 93);
-}
 .mountain-span {
   color: rgb(86, 124, 228);
 }
+
+.fashion-span {
+  color: rgb(255, 139, 93);
+}
+
 .hike-span {
   color: rgb(167, 110, 231);
 }
@@ -101,6 +103,22 @@ body {
   text-decoration: none;
   align-self: flex-start;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mountain-explore:hover {
+  border: 1px solid rgb(86, 124, 228);
+  color: rgb(86, 124, 228);
+}
+
+.fashion-explore:hover {
+  border: 1px solid rgb(255, 139, 93);
+  color: rgb(255, 139, 93);
+}
+
+.hike-explore:hover {
+  border: 1px solid rgb(167, 110, 231);
+  color: rgb(167, 110, 231);
 }
 
 /* .nav-bar {
@@ -150,11 +168,11 @@ body {
 .reveal-img,
 .reveal-text {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 150%;
+  height: 150%;
   background: #17181a;
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 .cursor {
@@ -163,4 +181,17 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  transition-property: background, transform;
+  transform-origin: 75% 75%;
+}
+.cursor.nav-active {
+  background: rgb(86, 124, 228);
+  transform: scale(2);
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
 }
