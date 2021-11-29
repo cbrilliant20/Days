@@ -2,6 +2,8 @@ let controller
 let slideScene
 let pageScene
 let mouse = document.querySelector(".cursor")
+let mouseTxt = mouse.querySelector(".cursor-text")
+console.log(mouseTxt)
 
 function animateSlides() {
   // Initialize Controller
@@ -70,11 +72,21 @@ function cursor(e) {
 
 function activeCursor(e) {
   const item = e.target
-  console.log(item)
+  // console.log(item)
   if (item.id === "logo" || item.classList.contains("burger")) {
     mouse.classList.add("nav-active")
   } else {
     mouse.classList.remove("nav-active")
+  }
+  if (item.classList.contains("explore")) {
+    mouse.classList.add("explore-active")
+    gsap.to(".title-swipe", 1, { y: "0%" })
+    mouseTxt.innerText = "Tap"
+  } else {
+    mouse.classList.remove("explore-active")
+    mouseTxt.innerText = ""
+    mouseTxt.style.color = "black"
+    gsap.to(".title-swipe", 1, { y: "100%" })
   }
 }
 
