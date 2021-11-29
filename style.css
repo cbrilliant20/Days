@@ -86,11 +86,11 @@ main {
 }
 .hero-desc h2 {
   font-family: "Abril Fatface";
-  font-size: 5rem;
+  font-size: 4rem;
 }
 .hero-desc p {
   padding: 3rem 0rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(223, 223, 223);
 }
 .explore {
@@ -103,6 +103,22 @@ main {
   text-decoration: none;
   align-self: flex-start;
   cursor: pointer;
+  transition: all 0.75s;
+}
+
+.mountain-explore:hover {
+  border: 1px solid rgb(86, 124, 228);
+  color: rgb(86, 124, 228);
+}
+
+.hike-explore:hover {
+  border: 1px solid rgb(167, 110, 231);
+  color: rgb(167, 110, 231);
+}
+
+.fashion-explore:hover {
+  border: 1px solid rgb(255, 139, 93);
+  color: rgb(255, 139, 93);
 }
 
 .nav-bar {
@@ -130,8 +146,24 @@ main {
   flex-basis: 30rem;
 }
 
+.nav-links a {
+  pointer-events: all;
+}
+
 .nav-links h3 {
   padding: 3rem 0rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #17181a;
+  cursor: pointer;
+  transition: all 0.75s;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #17181a;
 }
 
 .contact {
